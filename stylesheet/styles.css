@@ -1,0 +1,22 @@
+#strengthLevel{
+  width:96%;
+  display: inline;
+}
+
+#num{
+  display: inline-block;
+  width:30px;
+  border: solid 1px black;
+  text-align: center;
+  border-radius: 2px;
+  background-color: yellow;
+}
+
+#power-ups{
+  display: none;
+}
+
+#no-email-entered{
+  color: red;
+  display: none;
+}
