@@ -18,6 +18,9 @@
         return this;
     };
 
+    Truck.prototype.removeOrder = function(key) {
+        this.db.remove(key);
+    }
     //removes item from db using custeomer's email add
     //customerId = emailAddress
     Truck.prototype.deliverOrder = function(customerId) {
@@ -34,9 +37,10 @@
 
         console.log('Truck #' + this.truckId + ' has pending orders:');
         customerIdArray.forEach(function(id, index, arr) {
-            //console.log(this.db.get(id));
+            console.log(this.db.get(id));
             //console.log('showOrder');
-            this.showOrder(arr[index]);
+            //this.showOrder(arr[index]);
+
         }.bind(this));
 
         var newArr = Object.values(this.db.getAll());
