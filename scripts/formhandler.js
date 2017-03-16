@@ -41,8 +41,8 @@
                 console.log(item.name + ' is ' + item.value);
             });
 
-
-            if (data['size'] === "bomb" && data['flavor'] != "") {
+            //show modal if and only if size = bomb, flavor != empty, strength = 100
+            if (data['size'] === "bomb" && data['flavor'] != "" && data['strength'] === '100') {
                 //event.preventDefault();
                 $('#no-email-entered').css('display', 'none');
 
