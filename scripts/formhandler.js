@@ -72,20 +72,24 @@
 
                     });
                 } else {
-                    fn(data);
-                    this.reset();
-                    this.elements[0].focus();
                     console.log(data);
+                    fn(data);
+
                     $('#power-ups').css('display', 'none');
                     $(".cbox").attr("checked", false);
                     $('#num').html('30');
+
+                    this.reset();
+                    this.elements[0].focus();
                 }
             } else {
-                fn(data);
                 console.log(data);
+                fn(data);
+
                 $('#power-ups').css('display', 'none');
                 $(".cbox").attr("checked", false);
                 $('#num').html('30');
+
                 this.reset();
                 this.elements[0].focus();
             }
