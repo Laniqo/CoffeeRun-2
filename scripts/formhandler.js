@@ -75,22 +75,25 @@
                     console.log(data);
                     fn(data);
 
+                    this.reset();
                     $('#power-ups').css('display', 'none');
                     $(".cbox").attr("checked", false);
                     $('#num').html('30');
+                    $('#num').css('background-color', 'green');
 
-                    this.reset();
                     this.elements[0].focus();
                 }
             } else {
                 console.log(data);
                 fn(data);
 
+                this.reset();
                 $('#power-ups').css('display', 'none');
                 $(".cbox").attr("checked", false);
                 $('#num').html('30');
+                $('#num').css('background-color', 'green');
 
-                this.reset();
+
                 this.elements[0].focus();
             }
         });
@@ -102,34 +105,8 @@
         });
     };
 
-
-
-    /*
-        FormHandler.prototype.rangeOutput = function() {
-            this.$formElement.on('input change', '#strengthLevel', function(event) {
-                //event.preventDefault();
-                $('#num').html($(this).val());
-
-                if ($(this).val() <= 30) {
-                    $('#num').css('background-color', 'yellow');
-                } else if ($(this).val() > 30 && $(this).val() <= 60) {
-                    $('#num').css('background-color', 'green');
-                } else {
-                    $('#num').css('background-color', 'red');
-                }
-            });
-        };
-        */
-
-
     App.FormHandler = FormHandler;
     window.App = App;
 
 
 })(window);
-
-/*($('#strengthLevel').on('drag', function(event){
-  event.preventDefault();
-    $('#coffee-strength').value = $('#strengthLevel').value;
-}))();
-*/
